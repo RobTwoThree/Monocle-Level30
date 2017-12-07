@@ -1,0 +1,53 @@
+#message_ticker_red {
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  left: 0;
+  top: 0;
+  background-color: rgba(124, 35, 28, .85);
+  color: white;
+  font-size: 75%;
+  z-index: 100000;
+}
+
+#message_ticker_orange {
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  left: 0;
+  top: 0;
+  background-color: rgba(248, 163, 6, .85);
+  color: black;
+  font-size: 75%;
+  z-index: 100000;
+}
+
+#message_ticker_yellow {
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  left: 0;
+  top: 0;
+  background-color: rgba(251, 247, 3, .85);
+  color: black;
+  font-size: 75%;
+  z-index: 100000;
+}
+
+.ticker {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  right: 0px;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 100000;
+}
+
+.ticker p {
+  position: relative;
+  top: 0;
+  white-space: nowrap;
+  width: auto;
+  z-index: 100000;
+}
