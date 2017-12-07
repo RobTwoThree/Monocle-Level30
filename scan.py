@@ -210,12 +210,13 @@ def main():
     
     if conf.GO_HASH:
         hashkey = conf.GO_HASH_KEY
+        activate_hash_server(hashkey,
+                go_hash=conf.GO_HASH,
+                hash_endpoint=conf.HASH_ENDPOINT,
+                gohash_endpoint=conf.GOHASH_ENDPOINT)
     else:
-        hashkey = conf.HASH_KEY
-    activate_hash_server(hashkey,
-            go_hash=conf.GO_HASH,
-            hash_endpoint=conf.HASH_ENDPOINT,
-            gohash_endpoint=conf.GOHASH_ENDPOINT)
+        activate_hash_server(conf.HASH_KEY)
+
     if platform != 'win32':
         LOOP.add_signal_handler(SIGINT, launcher.cancel)
         LOOP.add_signal_handler(SIGTERM, launcher.cancel)
