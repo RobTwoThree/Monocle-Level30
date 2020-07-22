@@ -720,7 +720,7 @@ class Worker:
 
     async def account_promotion(self):
         if self.player_level and self.player_level >= 30:
-            self.log.warning('Congratulations {} has reached Lv.30. Moving it out of low-level slave pool', self.username)
+            self.log.warning('Congratulations {} has reached Lv.30. Moving it out of low-level subordinate pool', self.username)
             await sleep(1, loop=LOOP)
             await self.remove_account(flag='level30')
 
@@ -1693,7 +1693,7 @@ class Worker:
             self.log.warning('Removing {} due to temp disabled.', self.username)
         elif flag == 'level30':
             self.account['graduated'] = True
-            self.log.warning('Removing {} from slave pool due to graduation to Lv.30.', self.username)
+            self.log.warning('Removing {} from subordinate pool due to graduation to Lv.30.', self.username)
         elif flag == 'level1':
             self.account['demoted'] = True
             self.log.warning('Removing {} from captain pool due to insufficient level.', self.username)
